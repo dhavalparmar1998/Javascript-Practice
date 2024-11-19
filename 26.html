@@ -1,0 +1,76 @@
+
+  
+    <style>
+        table {
+            width: 600px;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid;
+            text-align: center;
+            padding: 8px;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+
+
+    <h2>Home Loan Amortization Schedule</h2>
+    <table>
+        <tr>
+            <th>Year</th>
+            <th>Opening Balance (₹)</th>
+            <th>EMI*12 (₹)</th>
+            <th>Interest Paid Yearly (₹)</th>
+            <th>Principal Paid Yearly (₹)</th>
+            <th>Closing Balance (₹)</th>
+        </tr>
+        <script>
+            var P = 2500000;  // Principal
+            var years = 30;   // Loan Tenure in years
+            var roi = 8.75;   // Annual Interest Rate
+
+            var N = years * 12;  // Total number of monthly payments
+            var R = roi / 12 / 100;  // Monthly interest rate
+            var remainingBalance = P;
+
+           
+            var emi = P*R*(1+R)**N/((1+R)**N-1);
+            emi = Math.round(emi);
+
+            for (let i = 1; i <= years; i++) {
+                var openingBalance = remainingBalance;
+                var yearlyEMI = emi * 12;
+                var interestPaidYearly = 0;
+                var principalPaidYearly = 0;
+
+                for (let j = 0; j < 12; j++) {
+                    var monthlyInterest = remainingBalance * R;
+                    var monthlyPrincipal = emi - monthlyInterest;
+
+                    interestPaidYearly += monthlyInterest;
+                    principalPaidYearly += monthlyPrincipal;
+
+                    remainingBalance -= monthlyPrincipal;
+                    
+                  
+                    if (remainingBalance < 0) {
+                        remainingBalance = 0;
+                    }
+                }
+
+                document.write(`
+                    <tr>
+                        <td>${i}</td>
+                        <td>${Math.round(openingBalance)}</td>
+                        <td>${Math.round(yearlyEMI)}</td>
+                        <td>${Math.round(interestPaidYearly)}</td>
+                        <td>${Math.round(principalPaidYearly)}</td>
+                        <td>${Math.round(remainingBalance)}</td>
+                    </tr>
+                `);
+            }
+        </script>
+    </table>
+<!-- ctrl + alt + 4 = ₹ -->

@@ -1,0 +1,67 @@
+<script>
+   console.log([]);
+
+   var brands = ["puma","nike","adidas","levis"];
+   console.log(brands);
+   console.log(brands[0]);
+   console.log(brands[1]);
+   console.log(brands[2]);
+
+
+   document.write(`
+   <ul>
+    <li><input type="checkbox">${brands[0]}</li>
+<li>${brands[1]}</li>
+<li>${brands[2]}</li>
+<li>${brands[3]}</li>
+</ul>
+   
+       
+   `);
+
+   var product = {
+       path:"https://rukminim2.flixcart.com/image/612/612/xif0q/t-shirt/o/4/p/-original-imahyyf3wfgnfger.jpeg?q=70",
+       name:"shirt",
+       price:1000,
+       size:["M","L","XL","S"]
+   }
+   console.log(product);
+   console.log(product.name);
+   console.log(product.price);
+   console.log(product.size.join(","));
+   console.log(product.path);
+   
+
+   document.write(`
+   <div>
+    <img src="${product.path}" alt="">
+    <h2>${product.price}</h2>
+    <p>${product.name}</p>
+    <p>size: ${product.size.join(",")}</p>
+    <p>
+    <button>Add to cart</button>
+</p>
+
+</div>
+
+      
+   
+   `)
+
+
+
+
+</script>
+<style>
+    div{
+        width: 200px;
+        border: solid;
+        text-align: center;
+    }
+    img{
+        width: 200px;
+    }
+</style>
+
+
+

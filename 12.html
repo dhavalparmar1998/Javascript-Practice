@@ -1,0 +1,24 @@
+<script>
+    var data1 = Math.round(10*Math.random());
+    console.log(data1);
+    var data2 = Math.round(10*Math.random());
+    console.log(data2);
+
+    // Template Literal
+
+    var record = `${data1} + ${data2} = ?`;
+
+    console.log(record);
+
+    var ans = prompt(record);
+    console.log(ans);
+
+    if(ans == data1 + data2){
+        console.log("valid");
+    }
+    else{
+        console.log("Invalid");
+    }
+
+
+</script>

@@ -1,0 +1,17 @@
+<script>
+    var filename = prompt("Enter file name");
+    console.log(filename.split("."));
+
+    var result = filename.split(".");
+
+    console.log(result);
+    console.log(result[1]);
+
+
+    if(result[1] == "png" || result[1] == "gif" || result[1] == "jpg"){
+        console.log("Valid");
+    }
+    else{
+        console.log("Invalid");
+    }
+</script>

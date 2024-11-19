@@ -1,0 +1,23 @@
+<script>
+
+    function calculateAge(userName,userDob) //parameters 
+    {
+        // console.log(userName);
+        // console.log(userDob, typeof userDob);
+
+        var ans = userDob.split("/");
+        // console.log(ans);
+        // console.log(ans[2]);
+
+        var ans1 = new Date();
+        // console.log(ans1);
+        // console.log(ans1.getFullYear());
+
+        var age = ans1.getFullYear() - ans[2];
+        console.log(userName, age);
+
+    }
+    calculateAge("shubham","4/11/1998");  //arguments
+    calculateAge("Dhaval","20/12/1998"); //arguments
+
+</script>

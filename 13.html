@@ -1,0 +1,22 @@
+<script>
+    var dateofbirth = prompt("Enter date of birth");
+    console.log(dateofbirth);
+    console.log(typeof dateofbirth);
+
+    var year = dateofbirth.slice(-4);
+    console.log(year);
+
+    var rec = new Date();
+    console.log(rec.getFullYear());
+
+    var age = rec.getFullYear() - year;
+    console.log(age);
+
+    if(age>=18){
+        console.log("Eligible for voting");
+    }
+    else{
+        console.log("Children");
+    }
+
+</script>

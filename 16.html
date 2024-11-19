@@ -1,0 +1,19 @@
+<script>
+    var salary = prompt('Enter your salary');
+    console.log(salary);
+
+    // ladder if
+
+    if(salary <=250000){
+        console.log('No Tax');
+    }
+    else if(salary <=500000){
+        console.log(`Tax is 5% : ${salary*5/100}`);
+    }
+    else if(salary <=1000000){
+        console.log(`Tax is 20% : ${salary*20/100}`);
+    }
+    else{
+        console.log(`Tax is 30% : ${salary*30/100}`);
+    }
+</script>

@@ -1,0 +1,14 @@
+<script>
+    var loanamount = 2500000
+    var years = 30
+    var roi = 8.75
+
+    var N = years*12;
+    var R = roi/12/100;
+    var P = loanamount;
+
+    var emi = P*R*(1+R)**N/((1+R)**N-1);
+    console.log(emi*12);
+    // emi = Math.round(emi);
+    document.write(`Emi : ${emi}`)
+</script>

@@ -1,0 +1,19 @@
+<script>
+    var brands = ["puma","nike","adidas","fila"];
+    for( var ans of brands){
+        console.log(ans);
+        document.write(`
+        <li>${ans}</li>
+        `)
+    }
+
+    var user = {
+        age:20,
+        name:"akshay",
+        role:"admin"
+    }
+
+    for(var keys in user){
+        console.log(keys, user[keys]);
+    }
+</script>
