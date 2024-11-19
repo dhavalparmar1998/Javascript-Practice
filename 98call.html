@@ -1,0 +1,25 @@
+<!-- fetching information from 1 object into other functionality is called as call  -->
+<script>
+    var user1 = {
+        dob:"20/12/1990",
+        name:"john"
+    }
+    var user2 = {
+        dob:"20/12/1991",
+        name:"john cena"
+    }
+    var user3 = {
+        dob:"20/12/1992", 
+        name:"john james"
+    }
+
+     var record = {
+         agecalculator:function(place,hobby){
+             console.log(this.dob,place,hobby);
+         }
+     }
+
+     record.agecalculator.call(user1,"thane","reading");
+     record.agecalculator.call(user2, "pune","writing");
+     record.agecalculator.call(user3, "mumbai","coding");
+</script>

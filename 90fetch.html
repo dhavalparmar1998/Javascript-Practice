@@ -1,0 +1,19 @@
+<button>Fetch Data</button>
+
+<script>
+    document.querySelector("button").onclick = function(){
+        var apipath = "https://fakestoreapi.com/products";
+
+        var result = fetch(apipath);
+        console.log(result);
+
+        result.then(res=>{
+            var ans = res.json();
+            console.log(ans);
+
+            ans.then(value=>{
+                console.log(value);
+            })
+        })
+    }
+</script>

@@ -1,0 +1,17 @@
+<script>
+    class Area{
+        constructor(){
+            console.log("called");
+            this.pi = Math.PI
+            
+        }
+        circle(r){
+            console.log(r);
+            console.log(this.pi);
+            console.log(this.pi*r*r);
+        }
+
+    }
+    var obj = new Area();
+    obj.circle(5);
+</script>

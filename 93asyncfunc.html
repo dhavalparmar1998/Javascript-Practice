@@ -1,0 +1,25 @@
+<script>
+    function f1(){
+        return 100;  // return is the termination of a function.
+        console.log("hello");
+    }
+    var ans = f1();
+    console.log(ans);
+
+    //////////////////////////////////
+    function f2(){
+        return [10,20,30]
+    }
+    var ans = f2();
+    console.log(ans);
+
+    async function f3(){
+        return [10,20,30]
+    }
+    var ans = f3();
+    console.log(ans);
+
+    ans.then(val=>{
+        console.log(val);
+    })
+</script>

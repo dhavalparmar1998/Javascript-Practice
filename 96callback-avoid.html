@@ -1,0 +1,24 @@
+<script>
+    async function apicall(){
+        var res = await fetch ("https://fakestoreapi.com/products");
+        var ans = await res.json();
+        console.log(ans);
+
+        var productid = ans[0].id;
+
+        var res = await fetch ("https://fakestoreapi.com/products/"+productid);
+        var ans = await res.json();
+        console.log(ans);
+
+        var catname = ans["category"];
+
+        var res = await fetch ("https://fakestoreapi.com/products/category/"+catname);
+        var ans = await res.json();
+        console.log(ans);
+
+
+
+    }
+    apicall();
+</script>
+

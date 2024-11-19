@@ -1,0 +1,20 @@
+<script>
+    class A{
+        f1(){
+            console.log("F1 from class A");
+        }
+    }
+
+    class B extends A{
+        f1(){
+            console.log("F1 from class B");
+            super.f1();
+        }
+    }
+    var obj = new B();
+    console.log(obj);
+
+    // obj.f2();
+    obj.f1();
+
+</script>

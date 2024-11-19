@@ -1,0 +1,15 @@
+<script>
+    var x = 300;
+    function f1(a){
+        function f2(b){
+            function f3(c){
+                console.log(a+b+c+x);
+            }
+            f3(300)
+        }
+        f2(200)
+    }
+    f1(100);
+</script>
+
+<!-- closure is a function enclosed within a function and the outer function is called as lexical scope -->

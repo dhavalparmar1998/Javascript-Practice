@@ -1,0 +1,15 @@
+<script>
+    const original = { name: 'Alice', age: 25, hobbies: ['reading', 'traveling'] };
+const deepCopy = JSON.parse(JSON.stringify(original));
+
+// Modify the deep copy
+deepCopy.name = 'Bob';
+deepCopy.hobbies.push('coding');
+
+console.log(original); // { name: 'Alice', age: 25, hobbies: ['reading', 'traveling'] }
+console.log(deepCopy); // { name: 'Bob', age: 25, hobbies: ['reading', 'traveling', 'coding'] }
+</script>
+
+<!-- 
+A deep copy can be made using Json.parse(Json.stringify()) for simple objects, Also it copies all nested objects, making the new object independent of the original. Changes to nested objects or arrays  do not affect the original.
+ -->

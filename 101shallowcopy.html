@@ -1,0 +1,29 @@
+<!-- <script>
+    // storage of objects or variables into other variables is called as shallow where same memory is allocated for both the variables.
+    var v1 = {name:"dhaval",age:20};
+    var v2 = v1;
+
+    console.log(v1);
+    console.log(v2);
+
+    v2.name = "ronak";
+    console.log(v2);
+    console.log(v1);
+
+    
+</script> -->
+
+<script>
+    const original = { name: 'Alice', age: 25, hobbies: ['reading', 'traveling'] };
+const shallowCopy = { ...original };
+
+// Modify the shallow copy
+shallowCopy.name = 'Bob';
+shallowCopy.hobbies.push('coding');
+
+console.log(original); // { name: 'Alice', age: 25, hobbies: ['reading', 'traveling', 'coding'] }
+console.log(shallowCopy); // { name: 'Bob', age: 25, hobbies: ['reading', 'traveling', 'coding'] }
+</script>
+
+<!-- 
+In JavaScript, a shallow copy creates a new object that is a copy of the original object, but only copies references to the original object's properties. A deep copy creates a new object and recursively copies all properties, ensuring that the new object is entirely independent of the original. A shallow copy can be made using object.assign() or spread operator. In short a shallow copy copies only references to nested objects or arrays, changes to nested objects affect both copies.-->

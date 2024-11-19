@@ -1,0 +1,34 @@
+<script>
+    fetch("https://fakestoreapi.com/products")
+    .then(res=>res.json())
+    .then(value=>{
+        console.log(value);
+        // console.log(value[0].id);
+        var productid = value[0].id;
+
+
+        fetch("https://fakestoreapi.com/products/"+productid)
+    .then(res=>res.json())
+    .then(value=>{
+        console.log(value);
+       var catname = value["category"];
+    //    console.log(catname);
+
+    fetch("https://fakestoreapi.com/products/category/"+catname)
+    .then(res=>res.json())
+    .then(value=>{
+        console.log(value);
+       
+
+    })
+// <!-- call back hell or pyramid of doom -->
+
+
+
+
+        
+    })
+
+
+    })
+</script>

@@ -1,0 +1,17 @@
+<input type="text" id="x1">
+<button>Enter</button>
+
+<script>
+    const apikey = "36e1575e4dd4d02d3fee92c6c81679dc";
+    document.querySelector("button").onclick = function(){
+        var data = document.getElementById("x1").value;
+        var apipath = `https://api.openweathermap.org/data/2.5/weather?q=${data}&appid=${apikey}&units=metric`;
+
+        fetch(apipath)
+        .then(res=>res.json())
+        .then(value=>{
+            console.log(value);
+            console.log(value.main.temp);
+        })
+    }
+</script>

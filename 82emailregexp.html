@@ -1,0 +1,23 @@
+<input type="text" id="x1">
+<button>Validate</button>
+<p></p>
+
+<script>
+    document.querySelector("button").onclick = function(){
+        var data = document.querySelector("#x1").value;
+        var pattern = /^([a-zA-Z0-9]([a-zA-Z0-9\.]+)?[a-zA-Z0-9])@(([a-zA-Z0-9]([a-zA-Z0-9\-]+)?[a-zA-Z0-9])\.([a-zA-Z]{2,})(\.[a-zA-Z]{2,})?)$/
+        var result = pattern.test(data);
+        console.log(result);
+
+        if(result){
+            document.querySelector("p").innerHTML = "Matched"
+        }
+        else {
+            document.querySelector("p").innerHTML = "Invalid";
+        }
+
+
+    }
+</script>
+
+<!--  /^(username)@(domainname)$/ -->

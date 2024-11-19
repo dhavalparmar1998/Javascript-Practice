@@ -1,0 +1,33 @@
+<!-- if we are handling a async operation if it is sucessfull then we have to use handlers then and if failed then use catch handler and 'finally' handler used  to perform other task
+1.The Promise object represents the eventual completion (or failure) of an asynchronous operation and its resulting value.
+2.A Promise is in one of these states:
+
+    pending: initial state, neither fulfilled nor rejected.
+    fulfilled: meaning that the operation was completed successfully.
+    rejected: meaning that the operation failed.
+3. promise is said to be settled if it is either fulfilled or rejected, but not pending.
+4. Promise can either be fulfilled or failed but cannot be both at a same time there is no race condition!!!! -->
+
+<script>
+    "use strict";
+
+    var promiseobj = new Promise((res,rej)=>{
+        console.log(typeof res, typeof rej);  // promise uses call back function which has 2 parameters resolve and reject and both are typeof function.
+        setTimeout(()=>{
+            // res({msg:"API Called", status:200, data:["mens","womens","kids"]});
+            rej({msg:"API FAILED", status:404,data:null});
+        },3000);
+    });
+
+    console.log(typeof promiseobj);
+    console.log(promiseobj);
+
+    promiseobj.then((value)=>{
+        console.log(value);
+    }).catch((error)=>{
+        console.log(error);
+        console.log("error message");
+    }).finally(()=>{
+        console.log("do other task");
+    })
+</script>

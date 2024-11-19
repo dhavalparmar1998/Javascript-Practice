@@ -1,0 +1,40 @@
+<script>
+    class TV{
+        volumecount = 0;
+        channel(channelname){
+            console.log("Channel Changed To:", channelname);
+        }
+        volumeup(count){
+            console.log(this);
+            this.volumecount = this.volumecount+1;
+            console.log("volume Change To:", count, this.volumecount);
+        }
+        volumedown(count){
+            // console.log(this);
+            if(this.volumecount>0){
+            this.volumecount = this.volumecount-1;
+            console.log("volume Change To:", count, this.volumecount);
+            }
+            else{
+                console.log("Invalid Volume Count");
+            }
+        }
+
+    }
+
+    var remote = new TV();
+    console.log(remote);
+
+    remote.channel("Sony Tv");
+    remote.channel("Star Tv");
+
+    function f1(){
+        remote.volumeup("Increment")
+    }
+    function f2(){
+        remote.volumedown("decrement")
+    }
+</script>
+
+<button onclick="f1()">+</button>
+<button onclick="f2()">-</button>

@@ -1,0 +1,25 @@
+<!-- Apply is similar as call but we have to pass argument in array only to get the data -->
+<script>
+    var user1 = {
+        dob:"20/12/1990",
+        name:"john"
+    }
+    var user2 = {
+        dob:"20/12/1991",
+        name:"john cena"
+    }
+    var user3 = {
+        dob:"20/12/1992",
+        name:"john james"
+    }
+
+     var record = {
+         agecalculator:function(place,hobby){
+             console.log(this.dob,place,hobby);
+         }
+     }
+
+     record.agecalculator.apply(user1,["thane","reading"]);
+     record.agecalculator.apply(user2, ["pune","writing"]);
+     record.agecalculator.apply(user3, ["mumbai","coding"]);
+</script>

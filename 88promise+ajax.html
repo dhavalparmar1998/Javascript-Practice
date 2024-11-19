@@ -1,0 +1,30 @@
+<script>
+    var objpromise = new Promise((res,rej)=>{
+        // console.log(typeof res);
+
+        var xmlhttp = new XMLHttpRequest();
+
+        xmlhttp.onreadystatechange = function(){
+            if(xmlhttp.readyState == 4 && xmlhttp.status == 200){
+                var ans = JSON.parse(xmlhttp.responseText);
+                res({msg:"success",status:200,data:ans});
+            }
+            else if(xmlhttp.readyState == 4 && xmlhttp.status == 404){
+                rej({msg:"API Called",status:404,data:null})
+            }
+        }
+
+        xmlhttp.open("get","https://fakestoreapi.com/products1234");
+        xmlhttp.send();
+    });
+    console.log(objpromise);
+
+    objpromise.then((val)=>{
+        console.log(val);
+
+    }).catch(err=>{
+        console.log(err);
+    }).finally(()=>{
+        console.log("Other Task");
+    })
+</script>

@@ -1,0 +1,11 @@
+<script>
+   async function f1(){
+        var res = await fetch("https://fakestoreapi.com/products");
+        console.log(res);
+        console.log(res.json());
+        
+    }
+</script>           
+<button onclick="f1()">Enter</button>
+
+<!-- If we want to use fetch without handlers we use async await -->

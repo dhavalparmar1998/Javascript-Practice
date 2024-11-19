@@ -1,0 +1,11 @@
+<script>
+    var arr = [];
+
+    Array.prototype.sqrt = function(value){
+        return value.map(rec=>Math.sqrt(rec));
+    }
+    console.log(arr);
+
+    var ans = arr.sqrt(([9,16,64]));
+    console.log(ans);
+</script>

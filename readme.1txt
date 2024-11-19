@@ -1,0 +1,33 @@
+callback hell and to solve use async await
+closure
+call apply and bind
+currying effect
+
+mockup topics
+ES-6 new features
+let vs var keyword
+find length of array and object
+forof vs forin
+splice vs splice
+array higher order methods ==> map,filter,reduce
+destructions array and object
+spread operators and rest parameters
+object freeze
+data types in js
+type casting in js
+scope in js
+ajax operations explain in  depth
+promises
+async await
+call back hell and prevent
+event bubbling and prevent
+event listeners vs event handlers
+DOM methods
+DOM properties
+== vs ===
+innerhtml vs innertext
+null vs undefined
+examples on loop (factorial, pyramid, armstrong)
+logical examples on array (largest no, smallest no)
+call apply and bind
+1st class function, higher order functions, call back and hoisting.

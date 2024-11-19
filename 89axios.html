@@ -1,0 +1,23 @@
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+<button>Fetch</button>
+
+<script>
+    // console.log(axios);
+    // Promise based library which performs asynchronous operations using xmlhttprequest on browser side.
+
+    document.querySelector("button").onclick = function(){
+        var ans = axios.get("https://fakestoreapi.com/products");
+        // console.log(ans);
+
+        var id;
+        ans.then(response=>{
+            console.log(response);
+            console.log(response.data);
+        }).catch().finally(()=>{
+            console.log("Other task");
+        })
+    }
+</script>
+
+<!-- axios uses ajax to fetch data  and gives data in promise object -->

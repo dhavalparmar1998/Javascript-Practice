@@ -1,0 +1,22 @@
+<script>
+    class A{
+        constructor(){
+            // console.log("called");
+            this.pi = Math.PI
+            
+        }
+       
+
+    }
+    class B extends A{
+        constructor(){
+            console.log("Constructor B");
+
+            super();
+            console.log(this);
+            console.log(this.pi);
+        }
+    }
+    var obj = new B();
+    // obj.circle(5);
+</script>

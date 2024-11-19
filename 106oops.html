@@ -1,0 +1,28 @@
+<script>
+    class User{
+        showname(){
+            console.log("Dhaval");
+        }
+        showage(){
+            console.log(26);
+        }
+        showlocation(){
+            console.log("Mumbai");
+        }
+
+        showalldata(){
+            console.log("Called");
+
+            this.showname();
+            this.showage();
+            this.showlocation();
+            // this.showalldata();
+        }
+    }
+
+    var u1 = new User();
+    console.log(u1);
+
+    u1.showalldata();
+
+</script>
