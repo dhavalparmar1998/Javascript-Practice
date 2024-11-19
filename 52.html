@@ -1,0 +1,30 @@
+<input type="text" id="x1" placeholder="Enter Temperature in degree celcius" /><br/>
+<button onclick="f1()">Enter</button>
+<p></p>
+
+<script>
+    function f1(){
+        var data = document.querySelector("#x1").value;
+        console.log(data);
+        console.log(isNaN(data));
+        var message="";
+
+
+        if(data==""){
+            message = "please Enter Temperature";
+        }
+        else if(isNaN(data)){
+            message = "Invalid Value as Temperature";
+        }
+        else{
+            data = Number(data);
+            var answer = (data*9/5) + 32;
+            message = `
+            Temperature in degree celcius : ${data} <br/>
+            Temperature in fahrenheit : ${answer} <br/>
+            
+            `
+        }
+        document.querySelector("p").innerHTML=message;
+    }
+</script>

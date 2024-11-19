@@ -1,0 +1,25 @@
+<script>
+    // first class function
+
+    var f1 = function(){
+        var a1=10;
+        var a2=20;
+
+        console.log("first class function");
+        console.log(a1+a2);
+
+    }
+    f1();
+
+    function myfunction(a,b,c){
+        console.log(a+b);
+        c();
+
+    }
+    myfunction(10,20,f1);
+    // myfunction is called higher order function.
+    // f1 is called first class function
+    // a function within a function is called first class function or callback function
+
+
+</script>

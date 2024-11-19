@@ -1,0 +1,37 @@
+<script>
+
+    // arrow function or lambda function or fat arrow function
+
+
+var f1 = (userName)=>{
+    // console.log(userName);
+    // console.log(userName.split(" "));
+
+    var ans = userName.split(" ");
+    // console.log(ans[0]);
+    // console.log(ans[1]);
+    // console.log(ans[2]);
+
+    // Array Destruction
+
+    var[firstName,middleName,lastName] = ans;
+    console.log(`
+    User First Name: ${firstName},
+    Middle Name: ${middleName},
+    Lat Name : ${lastName}
+    
+    `);
+
+    // console.log(typeof f1);
+
+
+    
+
+
+
+
+}
+    f1("Ameya Rakesh Patil");
+    f1("Akash Tukaram Shinde");
+
+</script>

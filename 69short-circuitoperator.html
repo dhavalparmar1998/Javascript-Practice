@@ -1,0 +1,28 @@
+<script>
+    var arr1 = [10,20,30,40];
+
+    try{
+        if(arr){
+            if(arr.length>0){
+                arr.forEach((value)=>{
+                    console.log(value);
+                });
+            }
+        }
+
+
+        arr && arr.length>0 && arr.forEach((value)=>{
+            console.log(value);
+        });
+    }
+
+    catch(e){
+        console.log(e);
+        if(e instanceof ReferenceError){             // here e instanceof ReferenceError is used to show error message without stopping the program execution.
+            document.write("Variable does not exists");
+
+        }
+    }
+
+
+</script>

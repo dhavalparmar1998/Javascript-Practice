@@ -1,0 +1,64 @@
+<script>
+    "use strict";
+
+    var brands = ["nike","puma","fila"];
+    var size = new Array("xl","xxl","M","XXL");
+
+    console.log(brands, brands.length);
+    console.log(size);
+
+    console.log(brands[0]);
+    console.log(brands[1]);
+    console.log(brands[2]);
+    console.log(brands[9]);
+    console.log(brands[-1]);
+
+    // //// for of loop
+
+
+    for(var val of brands){
+        document.write(`
+<li>${val}</li>
+        
+        
+        `)
+    }
+
+    for(var i in brands){
+        document.write(`
+<li>${i}, ${brands[i]}</li>
+        
+        
+        `)
+    }
+
+
+    //   /// for each loop with callback
+
+    size.forEach((val,i)=>{
+        document.write(`
+<li>${val}, ${i}</li>
+          
+        
+        `)
+    });
+
+    size.forEach(function(val,i){
+        document.write(`
+<li>${val}, ${i}</li>
+          
+        
+        `)
+    });
+    size.forEach(myfunc);  //// function refer
+
+    function myfunc(val,i){
+        document.write(`
+        <li>${val}, ${i}</li>
+        
+        `)
+    }
+
+    
+
+</script>

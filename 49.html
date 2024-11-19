@@ -1,0 +1,64 @@
+<input type="text" id="x1" placeholder="Enter Number 1"/> <br/>
+<input type="text" id="x2" placeholder="Enter Number 2"/> <br/>
+<button onclick="f1()">+</button>
+<button onclick="f2()">-</button>
+<button onclick="f3()">*</button>
+<button onclick="f4()">/</button>
+<p></p>
+
+<script>
+    "use strict";
+
+    function f1(){
+        var data1 = document.querySelector("#x1").value;
+        var data2 = document.querySelector("#x2").value;
+
+        console.log(data1,typeof data1);
+        console.log(data2,typeof data2);
+
+        var ans = Number(data1) + Number(data2);
+        console.log(ans);
+
+        document.querySelector("p").innerHTML = ans;
+
+    }
+    function f2(){
+        var data1 = document.querySelector("#x1").value;
+        var data2 = document.querySelector("#x2").value;
+
+        console.log(data1,typeof data1);
+        console.log(data2,typeof data2);
+
+        var ans = Number(data1) - Number(data2);
+        console.log(ans);
+
+        document.querySelector("p").innerHTML = ans;
+
+    }
+    function f3(){
+        var data1 = document.querySelector("#x1").value;
+        var data2 = document.querySelector("#x2").value;
+
+        console.log(data1,typeof data1);
+        console.log(data2,typeof data2);
+
+        var ans = Number(data1) * Number(data2);
+        console.log(ans);
+
+        document.querySelector("p").innerHTML = ans;
+
+    }
+    function f4(){
+        var data1 = document.querySelector("#x1").value;
+        var data2 = document.querySelector("#x2").value;
+
+        console.log(data1,typeof data1);
+        console.log(data2,typeof data2);
+
+        var ans = Number(data1) / Number(data2);
+        console.log(ans);
+
+        document.querySelector("p").innerHTML = ans;
+
+    }
+</script>

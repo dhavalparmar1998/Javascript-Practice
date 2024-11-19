@@ -1,0 +1,39 @@
+<link rel="stylesheet" href="style.css">
+<div class="container">
+    <section>
+        <h1>Add Student Details</h1>
+        <ul>
+            <li>
+                <input type="text" id="userinfo" placeholder=" Student name"/>
+            </li>
+            <li>
+                <input type="text" id="userinfo" placeholder="Class and Division"/>
+            </li>
+            <li>
+                <input type="text" id="userinfo" placeholder="Student Roll No"/>
+            </li>
+            <li>
+                <button class="add">Add</button>
+                <button class="update">update</button>
+            </li>
+        </ul>
+    </section>
+    <hr/>
+    <section>
+    <h1>Show Student Details</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Division</th>
+                <th>Roll No</th>
+                <th>Delete</th>
+                <th>Edit</th>
+            </tr>
+        </thead>
+        <tbody id="result"></tbody>
+    </table>
+</section>
+</div>
+
+<script src="crud.js"></script>

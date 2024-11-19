@@ -1,0 +1,12 @@
+<input type="text" id="x1" placeholder="Enter color"><br/>
+<button onclick="myfunc()">Enter</button>
+<p></p>
+<script>
+    function myfunc(){
+        var data = document.querySelector("#x1").value;
+        document.querySelector("p").style.border = "solid";
+        document.querySelector("p").style.width = "300px";
+        document.querySelector("p").style.height = "100px";
+        document.querySelector("p").style.background = data;
+    }
+</script>

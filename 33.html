@@ -1,0 +1,21 @@
+<script>
+
+    var simpleInterest = function(P,R,T){
+        var interest = P*R*T/100;
+        // console.log(interest);
+
+        var amount = interest + P;
+        // console.log(amount);
+
+        console.log(`
+        Investment : ${P},
+        Interest : ${interest},
+        Total Amount : ${amount}
+        
+        `);
+    }
+
+    simpleInterest(10000,7,30);
+    simpleInterest(70000,8,10);
+
+</script>

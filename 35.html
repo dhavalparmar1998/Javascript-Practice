@@ -1,0 +1,35 @@
+<script>
+
+    var fileExtension = (filename)=>{
+        // console.log("function called");
+
+        var allowedTypes = ["png","jpeg","jpg"];
+        // console.log(allowedTypes);
+
+        console.log(filename);
+        // console.log(filename.split("."));
+
+        var arr = filename.split(".");
+        // console.log(arr);
+
+        var lastindexNo = arr.length-1;
+        // console.log(lastindexNo);
+
+        var extension = arr[lastindexNo];
+        // console.log(extension);
+
+        var checkValue = allowedTypes.includes(extension);
+        // console.log(checkValue);
+
+        if(checkValue){
+            console.log(filename, "Valid File");
+        }
+        else{
+            console.log(filename, "Invalid File");
+        }
+    }
+    fileExtension("screenshot.png");
+    fileExtension("landscape.screenshot.png");
+    fileExtension("myprofile.pdf");
+
+</script>

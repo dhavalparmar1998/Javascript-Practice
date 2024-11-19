@@ -1,0 +1,37 @@
+<script>
+
+    function taxCalculation(userName,userSalary){
+        console.log(userName,userSalary);
+
+        var taxAmount;
+        var finalSalary;
+        if(userSalary<=250000){
+            taxAmount=0;
+            finalSalary=userSalary;
+        }
+        else if(userSalary <= 500000){
+            taxAmount = userSalary*5/100;
+            finalSalary = userSalary - taxAmount;
+        }
+        else if(userSalary <= 1000000){
+            taxAmount = userSalary*20/100;
+            finalSalary = userSalary - taxAmount;
+        }
+        else{
+            taxAmount = userSalary*30/100;
+            finalSalary = userSalary - taxAmount;
+        }
+
+        console.log(`
+         userName : ${userName},
+         userTax : ${taxAmount},
+         FinalIncome : ${finalSalary}
+        `);
+
+
+    }
+    taxCalculation("Shubham", 300000)
+    taxCalculation("Dhaval", 500000)
+    taxCalculation("Ganesh", 1500000)
+
+</script>

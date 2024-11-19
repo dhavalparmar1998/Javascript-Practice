@@ -1,0 +1,22 @@
+<button onclick="f1()">Enter</button>
+
+<script>
+    // anonymous function or unnamed function
+
+    var f1 = function(){
+        console.log("function called");
+
+        var price = 3000;
+        var discount = 30;
+        var discountedPrice = price*discount/100;
+        console.log(discountedPrice);
+        var finalPrice = price - discountedPrice;
+        console.log(`
+        Product Price : ${price},
+        Product Discount : ${discount}%,
+        Final Price After Discount : ${finalPrice}
+        
+        `);
+    }
+
+</script>

@@ -1,0 +1,24 @@
+<!-- JSON - JAVASCRIPT OBJECT NOTIFICATION 
+It is recommended to share data between the application or technologies, the fundamental of json is based on javascript, it is a technique developed by Douglas Crockford in 2003, We can check ou json in JSON LINT TOOL -->
+
+<script>
+    var score = '{"team1":"India","team2":"Australia","score1":200,"score2":190,"stadium":"Wankhede","date":"24/6/2024"}';
+    console.log(typeof score);
+    console.log(score);
+
+    var result = JSON.parse(score);
+    console.log(result);
+    console.log(typeof result);
+</script>
+
+<script>
+    var info = {
+        name:"sachin tendulkar",
+        age:40,
+        place:"mumbai",
+        team:"india",
+
+    };
+    var result = JSON.stringify(info);
+    console.log(result);
+</script>

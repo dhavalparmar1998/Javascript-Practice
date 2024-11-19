@@ -1,0 +1,31 @@
+<script>
+    "use strict";
+
+var user1 =  {
+    name:"dikshant",
+    dob: "20-10-2003"
+}
+var user2 = {
+    name: "premsai",
+    dob: "1-3-2004"
+}
+
+var info = {
+    age:function(){
+        // console.log("age func called");
+        // console.log(this);
+        // console.log(this.dob);
+        // console.log(this.dob.split("-"));
+        console.log(this.dob.split("-")[2]);
+
+        var rec = new Date();
+        console.log(rec);
+        // console.log(rec.getFullYear());
+        var ageans = rec.getFullYear() - (this.dob.split("-")[2]);
+        console.log(ageans);
+    }
+}
+
+info.age.call(user1);
+info.age.call(user2);
+</script>

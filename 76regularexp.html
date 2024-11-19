@@ -1,0 +1,23 @@
+<input type="text" id="x1" placeholder="enter pincode">
+<button>Validate</button>
+<p></p>
+
+<script>
+    document.querySelector("button").onclick = function(){
+        var data = document.querySelector("#x1").value;
+        var pattern = /^[1-9][0-9][0-9][0-9][0-9][0-9]$/;
+        var result = pattern.test(data);
+        console.log(result);
+
+        if(result){
+            document.querySelector("p").innerHTML = "Matched"
+        }
+        else {
+            document.querySelector("p").innerHTML = "Invalid";
+        }
+
+
+    }
+</script>
+
+<!-- ^ this sign means 1st character, [] means individual character and $ means last character -->

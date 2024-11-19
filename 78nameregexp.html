@@ -1,0 +1,23 @@
+<input type="text" id="x1" placeholder="Enter Your Name">
+<button>Validate</button>
+<p></p>
+
+<script>
+    document.querySelector("button").onclick = function(){
+        var data = document.querySelector("#x1").value;
+        var pattern = /^[a-zA-Z]([a-zA-Z ]+)?[a-zA-Z]$/
+        var result = pattern.test(data);
+        console.log(result);
+
+        if(result){
+            document.querySelector("p").innerHTML = "Matched"
+        }
+        else {
+            document.querySelector("p").innerHTML = "Invalid";
+        }
+
+
+    }
+</script>
+
+<!-- here ? means optional -->

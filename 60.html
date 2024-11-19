@@ -1,0 +1,17 @@
+<script>
+    "use strict";
+
+    var size = new Array("XL","XXL","M","XXL");
+    console.log(size, size.length);
+
+    var newsize = new Set(size);
+    console.log(newsize);
+
+    newsize.forEach((val)=>{
+        document.write(`
+<li>${val}</li>
+
+        
+        `)
+    });
+</script>

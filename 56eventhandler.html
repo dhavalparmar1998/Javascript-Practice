@@ -1,0 +1,26 @@
+<!-- Event handlers -- can handle one latest event at a time -->
+<button id="b1">Enter</button>
+
+<script>
+    document.querySelector("#b1").onclick = function(){
+        console.log("test1");
+    }
+    document.querySelector("#b1").onmouseout = function(){
+        console.log("test2");
+    }
+</script>
+
+<hr/>
+
+<!-- event listners -- are used to listen multiple events -->
+
+<button id="b2">Enter</button>
+
+<script>
+    document.querySelector("#b2").addEventListener("click",function(){
+        console.log("hello 1");
+    })
+    document.querySelector("#b2").addEventListener("click",function(){
+        console.log("hello 2");
+    })
+</script>

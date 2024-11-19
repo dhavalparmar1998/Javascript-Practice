@@ -1,0 +1,54 @@
+<script>
+    "use strict";
+
+    var userstatus = false;
+
+    console.log(typeof userstatus);
+    console.log(userstatus);
+
+    console.log(!userstatus);
+
+    // /////
+    var userage = 20;
+    var pi = 3.14159;
+
+    console.log(userage, typeof userage);
+    console.log(pi, typeof pi);
+
+    var discount = "30.5";
+    console.log(discount, typeof discount);
+
+    var ans = parseInt(discount);
+    console.log(ans, typeof ans);
+
+    var ans = parseFloat(discount);
+    console.log(ans, typeof ans);
+
+    var ans = Number(discount);
+    console.log(ans, typeof ans);
+
+    var ans = +discount;
+    console.log(ans, typeof ans);
+
+    console.log(20 + 20);
+    console.log(20 + "20");
+    console.log(20 - "20");
+    console.log(20 * "20");
+    console.log(20 / "20");
+
+    var amount = 9000;
+    console.log(amount, typeof amount);
+    var ans = amount.toString();
+    console.log(ans, typeof ans);
+
+    console.log("hello world ${amount}");
+    console.log('hello world ${amount}');
+
+    // template litereral
+    console.log(`
+    hello, world
+    ${amount}
+    
+    `);
+
+</script>

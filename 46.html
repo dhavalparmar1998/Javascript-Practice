@@ -1,0 +1,36 @@
+<button onclick="f1()">Enter</button>
+<h1>Hello World</h1>
+<h2>Hello World</h2>
+<p>Hello World</p>
+
+<style>
+    .xyz{
+        border: solid;
+        width: 200px;
+        height: 100px;
+    }
+    #abc{
+      background-color: gray;
+        width: 200px;
+        height: 100px;
+    }
+</style>
+
+<script>
+    var f1 = function(){
+        console.log(document);
+        console.log(document.querySelector("h1"));
+        console.log(document.querySelector("h2"));
+        console.log(document.querySelector("p"));
+
+        document.querySelector("h1").innerText = "<u>new data</u>";
+        document.querySelector("h1").innerHTML = "<u>new data</u>";
+        document.querySelector("p").style.border = "solid";
+        document.querySelector("p").style.width = "200px";
+        document.querySelector("p").style.height = "100px";
+
+        document.querySelector("h2").className = "xyz";
+        document.querySelector("h1").id = "abc";
+
+    }
+</script>

@@ -1,0 +1,10 @@
+<input type="text" id="x1" maxlength="10" />
+
+<script>
+    document.querySelector("#x1").onkeyup = function(){
+        console.log(this);
+        console.log(this.value);
+        var ans = this.value.toUpperCase();
+        document.querySelector("#x1").value = ans;
+    }
+</script>

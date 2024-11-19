@@ -1,0 +1,15 @@
+<script>
+    var arr = [10,20,30,40];
+
+    arr.reduce((acc, nextvalue)=>{
+        console.log(acc, nextvalue);  // here acc can also be referred as successor.
+    });
+    arr.reduce((acc , nextvalue)=>{
+        console.log(acc, nextvalue);
+        return acc+nextvalue;
+    })
+
+
+    // var ans = arr.reduce((acc , nextvalue)=>acc-nextvalue)
+    // console.log(ans);
+</script>

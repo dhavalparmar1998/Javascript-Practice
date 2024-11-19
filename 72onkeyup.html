@@ -1,0 +1,12 @@
+<textarea name="" id="" maxlength="30"></textarea>
+<div>30</div>
+
+<script>
+    document.querySelector("textarea").onkeyup = function(){
+        console.log(this);
+        console.log(this.value);
+        console.log(this.value.length);
+        var result = 30 - this.value.length
+        document.querySelector("div").innerText = result;
+    }
+</script>

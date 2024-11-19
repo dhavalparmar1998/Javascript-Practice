@@ -1,0 +1,30 @@
+<script>
+    // spread operator -
+
+    var a1 = [10,20,30];
+    var a2 = [110,120,130];
+
+    var a3 = [...a1,...a2];
+    console.log(a3);
+
+    var info1 = {name:"akshay",age:20};
+    var info2 = {name:"ameya",age:21,place:"mumbai"};
+    var info3 = {name:"aniket",age:22,place:"thane",role:"developer"};
+
+    var info = {...info1,...info2,...info3};
+    console.log(info);
+
+
+    // rest parameters
+
+    function myfunction(a1,a2,...a3){
+        console.log(a1);
+        console.log(a2);
+        console.log(a3);
+
+    }
+    myfunction(10,20,30,40,50,60,70,80,90,100);                         
+
+
+
+</script>

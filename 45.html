@@ -1,0 +1,31 @@
+<html>
+    <head></head>
+    <body>
+        <h1>Hello</h1>
+        <h1>Hello</h1>
+        <h1>Hello</h1>
+        <h2>Hello</h2>
+        <button onclick="myfunc()">Enter</button>
+
+        <script>
+            // console.log(document);
+            // console.log(typeof document);
+
+            function myfunc(){
+                console.log(document);
+                console.log(document.querySelector("h1"));
+                console.log(document.querySelector("h2"));
+
+
+                document.querySelector("h1").style.background = "gray";
+                document.querySelector("h1").innerText = "test";
+                document.querySelector("h2").remove();
+
+
+
+
+            }
+
+        </script>
+    </body>
+</html>

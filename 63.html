@@ -1,0 +1,33 @@
+<!-- function within a function is called a callback function -->
+
+<script>
+    var f1 = function(){}
+
+    function outer(){
+        // 1st class function
+    }
+
+
+    outer(()=>{})
+
+    // here  outer is higher order function and function inside it is called call back function or 1st class function 
+
+    function outer(){
+        return ()=>{
+
+        }
+    }
+    outer();
+
+    function f2(){
+        console.log("function f2");
+    }
+
+    function myfunc1(a,b,c){
+        console.log(a);
+        console.log(b);
+        c();
+    }
+
+    myfunc1(10,20,f2);
+</script>

@@ -1,0 +1,46 @@
+<input type="text" id="x1" placeholder="Enter Number 1"/> <br/>
+<input type="text" id="x2" placeholder="Enter Number 2"/> <br/>
+<button onclick="f1('+')">+</button>
+<button onclick="f1('-')">-</button>
+<button onclick="f1('*')">*</button>
+<button onclick="f1('/')">/</button>
+<p></p>
+
+<script>
+    "use strict";
+
+    function f1(xyz){
+        var data1 = document.querySelector("#x1").value;
+        var data2 = document.querySelector("#x2").value;
+
+        console.log(data1,typeof data1);
+        console.log(data2,typeof data2);
+
+        if(xyz == '+'){
+            var ans1 = Number(data1) + Number(data2);
+        // console.log(ans1);
+        document.querySelector("p").innerHTML = ans1;
+       
+        }
+        else if(xyz == "-"){
+            var ans1 = Number(data1) - Number(data2);
+        // console.log(ans1);
+        document.querySelector("p").innerHTML = ans1;
+        }
+        else if(xyz == "*"){
+            var ans1 = Number(data1) * Number(data2);
+        // console.log(ans1);
+        document.querySelector("p").innerHTML = ans1;
+        }
+        else{
+            var ans1 = Number(data1) / Number(data2);
+        // console.log(ans1);
+        document.querySelector("p").innerHTML = ans1;
+        }
+
+    //   result = (rec==1)?(data1+data2):(rec==2)?(data1-data2):(rec==3)?(data1*data2):(rec==4)?(data1/data2)
+       
+
+    }
+    
+</script>

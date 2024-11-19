@@ -1,0 +1,21 @@
+<div>
+    <button>Add To Cart</button>
+</div>
+
+<style>
+    div{
+        border: solid;width: 300px;height: 450px;
+    }
+</style>
+<script>
+    document.querySelector("button").onclick = function(ev){
+        console.log("perform add to cart");
+        // console.log(ev);
+        // ev.cancelBubble = true;  to avoid event bubbling use this cancelbubble property.
+        ev.stopPropagation();  // also we can use this functionality to avoid event bubbling here parent event is div.
+        // if same event is applied to both parent and child element then by default event bubbling occurs to avoid this we use above 2 methods.In event bubbling if we call child event then by default parent event also gets called.
+    }
+    document.querySelector("div").onclick = function(){
+        console.log("perform on div click");
+    }
+</script>

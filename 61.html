@@ -1,0 +1,28 @@
+<script>
+    var product = {
+        name:"product1",
+        price:1000,
+        discount:20
+    }
+
+    console.log(product,typeof product);
+
+    console.log(product.name);
+    console.log(product["name"]);
+
+    var userinfo = new Object({
+        name:"ameya",
+        age:20,
+        hobbies:["reading","writing"]
+    });
+    console.log(userinfo, typeof userinfo);
+
+    for(var key in userinfo){
+        console.log(key, userinfo[key]);
+    }
+
+    //  for(value of userinfo){
+    //          console.log(value);
+    // }
+   
+</script>

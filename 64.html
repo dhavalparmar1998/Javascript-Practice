@@ -1,0 +1,20 @@
+<script>
+    var user1 = ["ajay"];
+    var user2 = ["ameya","jeet","ajay"];
+
+    var users = [...user1,...user2];
+    console.log(users);
+
+    var info1 = {place: "mumbai",age:20};
+    var info2 = {role:"developer",age:21};
+
+    var info = {...info1,...info2};
+    console.log(info);
+
+    function myfunc(a,b,...rec){
+        console.log(a,b);
+        console.log(rec);
+    }
+    myfunc(10,20,30,40);
+    
+</script>

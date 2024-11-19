@@ -1,0 +1,12 @@
+<script>
+    // callback
+
+    function outer(a,b,c){
+        console.log(a+b);
+        c();
+    }
+
+    outer(10,20,function(){
+        console.log("callback or first class function");
+    })
+</script>
